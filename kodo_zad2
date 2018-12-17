@@ -1,0 +1,63 @@
+'''
+Podaj w oddzielnych wierszach liczbę, operację matematyczną: +, -, *, /, %,
+a nastepnie kolejną liczbę:
+12
++
+3
+Twój wynik to: 15
+Chcesz wykonać kolejne działanie? Wpisz listerę t lub n
+'''
+
+def main():
+
+    while True:
+        number_one = int(input('Podaj pierwszą liczbę: '))
+        action = input('''Wybierz działanie:
+        1 - dodawanie
+        2 - odejmowanie
+        3 - mnożenie
+        4 - dzielenie
+        5 - modulo
+        ''')
+        number_two = int(input('Podaj drugą liczbę: '))
+
+        if (action == '1'):
+            print('Twój wynik to: ', int(number_one + number_two))
+            next_atcion = input('Chcesz wykonać kolejne działanie? Wpisz listerę t lub n: ')
+            if (next_atcion == 't'):
+                continue
+            elif (next_atcion == 'n'):
+                break
+        elif (action == '2'):
+            print('Twój wynik to: ', int(number_one - number_two))
+            next_atcion = input('Chcesz wykonać kolejne działanie? Wpisz listerę t lub n: ')
+            if (next_atcion == 't'):
+                continue
+            elif (next_atcion == 'n'):
+                break
+        elif (action == '3'):
+            print('Twój wynik to: ', int(number_one * number_two))
+            next_atcion = input('Chcesz wykonać kolejne działanie? Wpisz listerę t lub n: ')
+            if (next_atcion == 't'):
+                continue
+            elif (next_atcion == 'n'):
+                break
+        elif (action == '4'):
+            if (number_two == 0):
+                print('nie dziel przez 0')
+            else:
+                print('Twój wynik to: ', int(number_one / number_two))
+            next_atcion = input('Chcesz wykonać kolejne działanie? Wpisz listerę t lub n: ')
+            if (next_atcion == 't'):
+                continue
+            elif (next_atcion == 'n'):
+                break
+        elif (action == '5'):
+            print('Twój wynik to: ', int(number_one % number_two))
+            next_atcion = input('Chcesz wykonać kolejne działanie? Wpisz listerę t lub n: ')
+            if (next_atcion == 't'):
+                continue
+            elif (next_atcion == 'n'):
+                break
+if __name__ == '__main__':
+    main()
